@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Dòng này cấp quyền ghi cho workflow
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - uses: Platane/snk@v3
@@ -18,8 +18,7 @@ jobs:
           github_user_name: HuynhKhanhDuy2912
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.gif?color_snake=purple&color_dots=pink
-            dist/github-contribution-grid-snake-ocean.gif?color_snake=cyan&color_dots=blue
+            dist/github-contribution-grid-snake-github.gif?color_snake=#216e39&color_dots=#9be9a8 # Đã đổi thành màu Xanh lá GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: crazy-max/ghaction-github-pages@v2
