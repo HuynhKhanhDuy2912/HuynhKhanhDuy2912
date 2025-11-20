@@ -8,12 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Dòng này cấp quyền ghi cho workflow
     steps:
       - uses: actions/checkout@v2
-      - uses: Platane/snk@v3 # Sửa: Dùng phiên bản v3
+      - uses: Platane/snk@v3
         id: snake-gif
         with:
-          github_user_name: HuynhKhanhDuy2912 # Tên người dùng của bạn
+          github_user_name: HuynhKhanhDuy2912
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.gif?color_snake=purple&color_dots=pink
