@@ -3,6 +3,6 @@
 # Hello! 👋 Long time no see <br>
 # I'm Huỳnh Khánh Duy, nice to meet you 😊 
 
-![Cat Typing GIF](https://media.giphy.com/media/PWHo98n9wJ8M0/giphy.gif)
+![Chill Coding GIF](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-9086-4fdfd33b515c.gif)
 
 </div>
