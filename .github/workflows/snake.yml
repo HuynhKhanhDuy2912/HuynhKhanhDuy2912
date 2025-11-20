@@ -1,23 +1,23 @@
 name: generate github-profile-readme-snake.svg
 
 on:
-  schedule: # chạy theo lịch trình
-    - cron: "0 0 * * *" # chạy mỗi 24 giờ lúc nửa đêm
-  workflow_dispatch: # cho phép chạy thủ công
+  schedule:
+    - cron: "0 0 * * *" 
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Platane/snk@master
+      - uses: Platane/snk@v3 # Sửa: Dùng phiên bản v3
         id: snake-gif
         with:
-          github_user_name: HuynhKhanhDuy2912 # Thay thế bằng tên người dùng GitHub của bạn
+          github_user_name: HuynhKhanhDuy2912 # Tên người dùng của bạn
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=black # Bạn có thể tùy chỉnh màu sắc ở đây
-            dist/github-contribution-grid-snake.gif?frame_rate=12&color_snake=purple&color_dots=pink
+            dist/github-contribution-grid-snake-dark.gif?color_snake=purple&color_dots=pink
+            dist/github-contribution-grid-snake-ocean.gif?color_snake=cyan&color_dots=blue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: crazy-max/ghaction-github-pages@v2
